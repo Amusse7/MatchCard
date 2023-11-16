@@ -1,15 +1,12 @@
 import random
 
-# Create a list of cards
 cards = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'] * 2
 random.shuffle(cards)
 
-# Function to display the current board
 def display_board(board):
     for row in board:
         print(" ".join(row))
 
-# Function to initialize the board
 def initialize_board():
     board = []
     for _ in range(4):
@@ -17,7 +14,6 @@ def initialize_board():
         board.append(row)
     return board
 
-# Function to play the game
 def play_game():
     board = initialize_board()
     display_board(board)
@@ -49,5 +45,4 @@ def play_game():
 
     print(f"Congratulations! You've matched all cards in {attempts} attempts.")
 
-# Start the game
 play_game()
